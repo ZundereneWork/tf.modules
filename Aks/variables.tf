@@ -73,10 +73,6 @@ variable "disk_size_gb" {
   description = "The size of the OS disk in the default node pool."
 }
 
-variable "aget_pool_subnet_id" {
-  type        = string
-  description = "The ID of the subnet where the agent pool will be created."
-}
 
 variable "network_plugin" {
   type        = string
@@ -120,4 +116,5 @@ variable "azurerm_container_registry_id" {
 
 variable "list_add_group_ids" {
   type        = list(string)
-  description = "A list of Azure AD group IDs to add as admins for the AK
+  description = "A list of Azure AD group IDs to add as admins for the AK"
+}

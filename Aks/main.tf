@@ -17,7 +17,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
     vnet_subnet_id          = var.subnet_id
     max_pods                = var.maxNode
     os_disk_size_gb         = var.disk_size_gb
-    vnet_subnet_id          = var.aget_pool_subnet_id
     enabled_node_public_ip  = false
     orchestrator_version    = var.kubernetes_version
  }
@@ -30,7 +29,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   dns_service_ip      = var.dns_service_ip
   docker_bridge_cidr  = var.docker_bridge_cidr
   service_cidr        = var.service_cidr
-  pod_cidr            = var.network_policy == 'kubenet' ? var.ip_range_pod : null
+  pod_cidr            = var.network_policy == "kubenet" ? var.ip_range_pod : null
 
  }
 
