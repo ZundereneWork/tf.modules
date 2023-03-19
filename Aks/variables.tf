@@ -22,10 +22,6 @@ variable "version_aks" {
   type = string
 }
 
-variable "aks_name" {
-  type = string
-}
-
 variable "size" {
   type = string
 }
