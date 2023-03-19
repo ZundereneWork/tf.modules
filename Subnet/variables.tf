@@ -6,7 +6,7 @@ variable "loc" {
   type = string
 }
 
-variable "count" {
+variable "cont" {
   type = number
 }
 

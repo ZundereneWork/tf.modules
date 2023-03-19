@@ -1,10 +1,10 @@
 resource "azurerm_kubernetes_cluster" "aks" {
-  name                = "${var.name}-aks-${var.loc}-${var.count}"
+  name                = "${var.name}-aks-${var.loc}-${var.cont}"
   location            = var.location
   resource_group_name = var.resource_group_name
-  dns_prefix          = "${var.name}-dns-${var.loc}-${var.count}"
+  dns_prefix          = "${var.name}-dns-${var.loc}-${var.cont}"
   kubernetes_version  = var.version_aks
-  node_resource_group = "${var.name}-node-${var.loc}-${var.count}"
+  node_resource_group = "${var.name}-node-${var.loc}-${var.cont}"
   service_cidr        = var.service_cidr
   dns_service_ip      = var.dns_service_ip
   pod_cidr            = var.pod_cidr

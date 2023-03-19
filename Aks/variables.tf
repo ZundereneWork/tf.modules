@@ -8,7 +8,7 @@ variable "loc" {
   description = "The location where the AKS cluster will be created."
 }
 
-variable "count" {
+variable "cont" {
   type        = string
   description = "A count used to generate unique resource names."
 }
