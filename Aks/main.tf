@@ -21,17 +21,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
     orchestrator_version    = var.kubernetes_version
  }
 
- network_profile {
-  network_plugin      = var.network_plugin
-  load_balace_sku     = var.load_balance_sku
-  outbound_type       = var.outbound_type
-  network_policy      = var.network_policy
-  dns_service_ip      = var.dns_service_ip
-  docker_bridge_cidr  = var.docker_bridge_cidr
-  service_cidr        = var.aks_network_cidr
-  pod_cidr            = var.network_policy == "kubenet" ? var.ip_range_pod : null
-
- }
 
  service_principal {
     client_id     = var.client_id
