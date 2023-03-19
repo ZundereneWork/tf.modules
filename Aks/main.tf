@@ -7,7 +7,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
 
 
   default_node_pool {
-    name                    = "${var.name}defaultnp"
+    name                    = "${var.name}"
     vm_size                 = var.size
     node_count              = var.numNodes
     vnet_subnet_id          = var.subnet_id
