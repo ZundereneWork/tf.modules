@@ -12,7 +12,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     node_count              = var.numNodes
     vnet_subnet_id          = var.subnet_id
     os_disk_size_gb         = var.disk_size_gb
-    enabled_node_public_ip  = false
+    enable_node_public_ip   = false
     orchestrator_version    = var.kubernetes_version
  }
 
