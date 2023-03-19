@@ -28,7 +28,7 @@ variable "version_aks" {
   description = "The version of Kubernetes to use for the AKS cluster."
 }
 
-variable "service_cidr" {
+variable "aks_network_cidr" {
   type        = string
   description = "The CIDR block used for Kubernetes services."
 }
@@ -119,6 +119,3 @@ variable "list_add_group_ids" {
   description = "A list of Azure AD group IDs to add as admins for the AK"
 }
 
-variable "aks_network_cidr" {
-  type        = string
-}
