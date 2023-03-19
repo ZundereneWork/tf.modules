@@ -118,3 +118,7 @@ variable "list_add_group_ids" {
   type        = list(string)
   description = "A list of Azure AD group IDs to add as admins for the AK"
 }
+
+variable "aks_network_cidr" {
+  type        = string
+}

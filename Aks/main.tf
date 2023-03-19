@@ -28,7 +28,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   network_policy      = var.network_policy
   dns_service_ip      = var.dns_service_ip
   docker_bridge_cidr  = var.docker_bridge_cidr
-  service_cidr        = var.service_cidr
+  service_cidr        = var.aks_network_cidr
   pod_cidr            = var.network_policy == "kubenet" ? var.ip_range_pod : null
 
  }
