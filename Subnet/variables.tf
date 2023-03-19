@@ -11,7 +11,7 @@ variable "cont" {
 }
 
 variable "aks_network_cidr" {
-  type = string
+  type        = list(string)
 }
 
 variable "virtual_network_name" {
