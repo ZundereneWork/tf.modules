@@ -4,7 +4,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
   node_resource_group   = "${var.name}-node-${var.loc}-${var.cont}"
   location              = var.location
   resource_group_name   = var.resource_group_name
-  kubernetes_version    = var.version_aks
 
 
   default_node_pool {
