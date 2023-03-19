@@ -1,21 +1,17 @@
 resource "azurerm_kubernetes_cluster" "aks" {
-  name                = "${var.name}-aks-${var.loc}-${var.cont}"
-  location            = var.location
-  resource_group_name = var.resource_group_name
-  dns_prefix          = "${var.name}-dns-${var.loc}-${var.cont}"
-  kubernetes_version  = var.version_aks
-  node_resource_group = "${var.name}-node-${var.loc}-${var.cont}"
-  service_cidr        = var.service_cidr
-  dns_service_ip      = var.dns_service_ip
-  pod_cidr            = var.pod_cidr
+  name                  = "${var.name}-aks-${var.loc}-${var.cont}"
+  dns_prefix            = "${var.name}-dns-${var.loc}-${var.cont}"
+  node_resource_group   = "${var.name}-node-${var.loc}-${var.cont}"
+  location              = var.location
+  resource_group_name   = var.resource_group_name
+  kubernetes_version    = var.version_aks
+
 
   default_node_pool {
     name                    = "${var.aks_name}-default-np"
     vm_size                 = var.size
     node_count              = var.numNodes
-    type                    = var.type
     vnet_subnet_id          = var.subnet_id
-    max_pods                = var.maxNode
     os_disk_size_gb         = var.disk_size_gb
     enabled_node_public_ip  = false
     orchestrator_version    = var.kubernetes_version

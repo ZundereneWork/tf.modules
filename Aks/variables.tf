@@ -22,15 +22,7 @@ variable "version_aks" {
   type = string
 }
 
-variable "service_cidr" {
-  type = string
-}
-
-variable "dns_service_ip" {
-  type = string
-}
-
-variable "pod_cidr" {
+variable "aks_name" {
   type = string
 }
 
@@ -42,16 +34,8 @@ variable "numNodes" {
   type = number
 }
 
-variable "type" {
-  type = string
-}
-
 variable "subnet_id" {
   type = string
-}
-
-variable "maxNode" {
-  type = number
 }
 
 variable "disk_size_gb" {
