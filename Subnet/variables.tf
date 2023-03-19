@@ -10,7 +10,7 @@ variable "cont" {
   type = number
 }
 
-variable "aks_service_cidr" {
+variable "aks_network_cidr" {
   type = string
 }
 
