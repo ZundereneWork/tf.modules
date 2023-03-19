@@ -26,12 +26,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
     managed = true
     admin_group_object_ids = concat([], var.list_add_group_ids)
   }
-
-  addon_profile {
-    azure_policy {
-      enabled = true
-    }
-  }
 }
 
 
