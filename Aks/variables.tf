@@ -49,7 +49,3 @@ variable "client_secret" {
 variable "list_add_group_ids" {
   type = list(string)
 }
-
-variable "azurerm_container_registry_id" {
-  type = string
-}

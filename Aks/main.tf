@@ -27,10 +27,3 @@ resource "azurerm_kubernetes_cluster" "aks" {
     admin_group_object_ids = concat([], var.list_add_group_ids)
   }
 }
-
-
-resource "azurerm_role_assignment" "aks_acrpull" {
-  scope              = var.azurerm_container_registry_id
-  role_definition_id = "/subscriptions/910c5d1c-f32e-48a9-8068-a94718a51840/providers/Microsoft.Authorization/roleDefinitions/69e1f4b9-eb29-42b2-afd4-4b0c986de60c" //ID del role AcrPull
-  principal_id       = "${azurerm_kubernetes_cluster.aks.kubelet_identity[0].object_id}"
-}
