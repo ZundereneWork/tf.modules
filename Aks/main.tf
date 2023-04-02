@@ -15,6 +15,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     os_disk_size_gb         = var.disk_size_gb
     enable_node_public_ip   = false
     orchestrator_version    = var.kubernetes_version
+    enable_auto_scaling     = true
  }
 
 
