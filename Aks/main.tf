@@ -12,6 +12,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     name                    = "${var.name}"
     vm_size                 = var.size
     node_count              = var.numNodes
+    min_count               = 1
     max_count               = 2
     vnet_subnet_id          = var.subnet_id
     os_disk_size_gb         = var.disk_size_gb
