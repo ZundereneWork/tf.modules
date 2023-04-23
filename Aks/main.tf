@@ -18,6 +18,10 @@ resource "azurerm_kubernetes_cluster" "aks" {
     enable_auto_scaling     = true
  }
 
+ network_profile {
+  load_balancer_sku = "basic"
+ }
+
 
 
  service_principal {
